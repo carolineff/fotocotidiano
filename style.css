@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Karla', 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Seção de apresentação */
+
+#presentation h1{
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    position: relative;
+    color: black;
+    animation: typewriter 1.5s steps(14), infinite reverse, blink 800ms steps(14) infinite normal;
+    border-right: 1px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+ }
+
+#presentation h2{
+    display: block;
+    width: fit-content;
+    font-size: 2em;
+    font-weight: 300;
+    position: relative;
+    color: black;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#presentation .cta{
+    display: inline-block;
+    font-size: 4em;
+    font-weight: 300;
+    padding: 10px 230px;
+    margin-top: 40px;
+    margin-bottom: 10px; 
+    color: black;
+    transform: rotate(90deg);
+}
+
+#presentation .cta:hover{
+    color: gray;
+}
+
+/* Seção de galeria */
+
+#gallery .gallery{
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0;
+}
+
+#gallery .section-title{
+  display: block;
+  width: fit-content;
+  font-size: 3em;
+  font-weight: 700;
+  position: relative;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gallery .section-text{
+  display: block;
+  width: fit-content;
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5;
+  position: relative;
+  color: black;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+
+#gallery .gallery{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(16, 5vw);
+  grid-gap: 5px;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery__item--2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery__item--3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.gallery__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+.gallery__item--5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+.gallery__item--6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+.gallery__item--7 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+
+.gallery__item--8 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+
+.gallery__item--9 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 9;
+  grid-row-end: 13;
+}
+
+.gallery__item--10 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 11;
+  grid-row-end: 13;
+}
+
+.gallery__item--11 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 13;
+}
+
+.gallery__item--12 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 13;
+  grid-row-end: 16;
+}
+
+.gallery__item--13 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 13;
+  grid-row-end: 16;
+}
+
+/* Footer */
+
+
+#rodape{
+  display: flex;
+  justify-content: center;
+  padding: 10px 50px 30px 50px;
+}
+
+.redes img{
+  height: 40px;
+  width: 40px;
+}
+
+.redes li{
+  list-style: none;
+  display: inline-block;
+  list-style: none;
+}
+
+/* Keyframes */
+
+@keyframes typewriter {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    from {
+      border-color: black;
+    }
+    to {
+      border-color: transparent;
+    }
+  }
